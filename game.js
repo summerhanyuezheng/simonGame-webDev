@@ -1,5 +1,6 @@
 const gamePattern = []
 const buttonColours = ["red", "blue", "green", "yellow"]
+const userClickedPattern = []
 
 function nextSequence() {
     // generate random number from 0-3
@@ -12,6 +13,11 @@ function nextSequence() {
 }
 
 
+$(".btn").click(function() {
+    var userChosenColor = $(this).attr('id')
+    userClickedPattern.push(userChosenColor)
+    console.log(userClickedPattern);
 
+});
 
 
