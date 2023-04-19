@@ -17,7 +17,6 @@ $(document).keypress(function() {
 
 
 
-
 $(".btn").click(function() {
     var userChosenColor = $(this).attr('id')
     userClickedPattern.push(userChosenColor)
@@ -30,7 +29,11 @@ $(".btn").click(function() {
 
 });
 
-
+function startOver() {
+    level = 0
+    gamePattern = []
+    started = false
+}
 
 
 function checkAnswer(currentLevel) {
@@ -55,6 +58,7 @@ function checkAnswer(currentLevel) {
           }, 200);
 
         $("h1").text("Game Over, Press Any Key to Restart")
+        startOver()
     }
 }
 
